@@ -9,6 +9,10 @@ public class FanClass {
     private double radius = 5;
     private String color = "blue";
 
+    public FanClass() {
+
+    }
+
     public void setSpeed(int speed) {
         this.speed = speed;
     }
@@ -25,11 +29,25 @@ public class FanClass {
         this.color = color;
     }
 
+    public boolean isOn() {
+        return on;
+    }
+
+    @Override
     public String toString() {
-        if (this.on) {
-            return "Speed : " + speed + ", Color : " + color + ", Radius : " + radius + ". Fan is on.";
+        if (this.isOn()) {
+            return "FanClass{" +
+                    "speed=" + speed +
+                    ", on=" + on +
+                    ", radius=" + radius +
+                    ", color='" + color + '\'' +
+                    '}';
         } else {
-            return "Color : " + color + ", Radius : " + radius + ". Fan is off.";
+            return "FanClass{" +
+                    ", on=" + on +
+                    ", radius=" + radius +
+                    ", color='" + color + '\'' +
+                    '}';
         }
     }
 }

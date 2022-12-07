@@ -1,7 +1,4 @@
 package ObjectOrientedPrograming.Exercise.Fan;
-
-import ObjectOrientedPrograming.Exercise.Fan.FanClass;
-
 public class BuildFanClass {
     public static void main(String[] args) {
         FanClass fanNumb1 = new FanClass();
