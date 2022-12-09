@@ -15,10 +15,8 @@ public class Circle {
         return radius;
     }
 
-    public double area = Math.pow(radius, 2) * Math.PI;
-
-    public double getArea() {
-        return area;
+    public double getArea(){
+        return Math.pow(radius, 2) * Math.PI;
     }
 
     @Override
@@ -26,7 +24,7 @@ public class Circle {
         return "Circle{" +
                 "radius=" + radius +
                 ", color='" + color + '\'' +
-                ", area=" + area +
+                ", area= "+ getArea() +
                 '}';
     }
 }

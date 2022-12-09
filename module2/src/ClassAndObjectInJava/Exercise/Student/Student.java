@@ -2,7 +2,7 @@ package ClassAndObjectInJava.Exercise.Student;
 
 public class Student {
     private String name = "Jonh";
-    private String Classes = "C02";
+    private String classEs = "C02";
 
     public Student() {
     }
@@ -11,15 +11,15 @@ public class Student {
         this.name = name;
     }
 
-    protected void setClasses(String classes) {
-        Classes = classes;
+    public void setClassEs(String classEs) {
+        this.classEs = classEs;
     }
 
     @Override
     public String toString() {
         return "Student{" +
                 "name='" + name + '\'' +
-                ", Classes='" + Classes + '\'' +
+                ", classEs='" + classEs + '\'' +
                 '}';
     }
 }
