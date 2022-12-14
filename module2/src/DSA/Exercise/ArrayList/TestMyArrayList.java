@@ -57,7 +57,12 @@ public class TestMyArrayList {
             System.out.println(studentMyArrayList.get(2).getName());
 //            System.out.println(studentMyArrayList.indexOf(student3));
             System.out.println(studentMyArrayList.contains(student2));
-            newStudentMyArrayList.clone(studentMyArrayList);
+            newStudentMyArrayList = studentMyArrayList.clone();
+            for (int i = 0; i < newStudentMyArrayList.size(); i++){
+                System.out.println(newStudentMyArrayList.get(i).getName());
+            }
+            Student student = newStudentMyArrayList.remove(0);
+            System.out.println(student.getName());
         }
     }
 }

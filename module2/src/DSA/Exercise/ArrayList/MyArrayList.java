@@ -125,10 +125,27 @@ public class MyArrayList<E> {
     public boolean contains(E element){
         return this.indexOf(element) >= 0;
     }
+
+    /**
+     * Phương thức tạo ta 1 bản sao của MyArrayList hiện tại.
+     * @return
+     */
     public MyArrayList<E> clone(){
         MyArrayList<E> v = new MyArrayList<>();
         v.elements = Arrays.copyOf(this.elements,this.size);
         v.size = this.size;
         return v;
+    }
+    public E remove(int index){
+        if (index < 0 || index > elements.length ){
+            throw new IllegalArgumentException("Error index: " + index);
+        }
+        E element = (E) elements[index];
+        for (int i = 0; i < size-1; i++){
+            elements[i] = elements[i+1];
+        }
+        elements[size - 1] = null;
+        size--;
+        return  element;
     }
 }
