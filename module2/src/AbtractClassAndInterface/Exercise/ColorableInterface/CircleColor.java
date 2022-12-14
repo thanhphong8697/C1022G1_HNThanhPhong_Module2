@@ -3,17 +3,30 @@ package AbtractClassAndInterface.Exercise.ColorableInterface;
 import AbtractClassAndInterface.Exercise.ResizeableInterface.Resizeable;
 import AbtractClassAndInterface.Exercise.ResizeableInterface.Shape;
 
-public class Circle extends Shape {
+public class CircleColor extends ShapeColor {
     private double radius = 1.0;
 
-    public Circle() {
-    }
-
-    public Circle(double radius) {
+    public CircleColor(double radius) {
+        super(radius);
         this.radius = radius;
     }
 
-    public Circle(double radius, String color, boolean filled) {
+    public CircleColor(String color, boolean filled, double radius) {
+        super(color, filled);
+        this.radius = radius;
+    }
+
+    public CircleColor(double radius, double radius1) {
+        super(radius);
+        this.radius = radius1;
+    }
+
+    public CircleColor(double width, double length, double radius) {
+        super(width, length);
+        this.radius = radius;
+    }
+
+    public CircleColor(double radius, String color, boolean filled) {
         super(color, filled);
         this.radius = radius;
     }
@@ -36,10 +49,6 @@ public class Circle extends Shape {
 
     @Override
     public String toString() {
-        return "Circle{" +
-                "radius=" + radius +
-                "area " + this.getArea()+
-                super.getColor()+
-                '}';
+        return "Circle{"+this.getArea()+"}";
     }
 }

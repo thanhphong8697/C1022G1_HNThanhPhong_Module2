@@ -1,20 +1,20 @@
 package AbtractClassAndInterface.Exercise.ColorableInterface;
 
 
-public class Shape implements Colorable {
+public class ShapeColor{
     private String color = "green";
 //    private boolean filled = true;
 
 
-    public Shape(String color, boolean filled) {
+    public ShapeColor(String color, boolean filled) {
         this.color = color;
 //        this.filled = filled;
     }
 
-    public Shape(double radius) {
+    public ShapeColor(double radius) {
     }
 
-    public Shape(double width, double length) {
+    public ShapeColor(double width, double length) {
     }
 
     public String getColor() {
@@ -25,24 +25,10 @@ public class Shape implements Colorable {
         this.color = color;
     }
 
-//    public boolean isFilled() {
-//        return filled;
-//    }
-//
-//    public void setFilled(boolean filled) {
-//        this.filled = filled;
-//    }
-
-
     @Override
     public String toString() {
         return "Shape{" +
                 "color='" + color + '\'' +
                 '}';
-    }
-
-    @Override
-    public void howToColor() {
-
     }
 }

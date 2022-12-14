@@ -38,7 +38,6 @@ public class Circle extends Shape implements Resizeable {
                 + ", which is a subclass of "
                 + super.toString();
     }
-
     @Override
     public void resize(double percent) {
         System.out.println("Diện tích hình tròn sau khi tăng là: " + this.getArea() + (this.getArea() * (percent / 100)));

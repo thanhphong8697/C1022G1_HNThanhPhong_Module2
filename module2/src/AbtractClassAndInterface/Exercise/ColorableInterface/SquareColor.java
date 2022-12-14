@@ -3,18 +3,21 @@ package AbtractClassAndInterface.Exercise.ColorableInterface;
 import AbtractClassAndInterface.Exercise.ResizeableInterface.Resizeable;
 import AbtractClassAndInterface.Exercise.ResizeableInterface.Shape;
 
-public class Square extends Shape implements Colorable {
+public class SquareColor extends ShapeColor implements Colorable {
     private double side;
 
-    public Square() {
-    }
-
-    public Square(double side) {
+    public SquareColor(String color, boolean filled, double side) {
+        super(color, filled);
         this.side = side;
     }
 
-    public Square(String color, boolean filled, double side) {
-        super(color, filled);
+    public SquareColor(double radius, double side) {
+        super(radius);
+        this.side = side;
+    }
+
+    public SquareColor(double width, double length, double side) {
+        super(width, length);
         this.side = side;
     }
 
@@ -32,14 +35,12 @@ public class Square extends Shape implements Colorable {
 
     @Override
     public String toString() {
-        return "Square{" +
+        return "SquareColor{" +
                 "side=" + side +
                 '}';
     }
-
     @Override
     public void howToColor() {
-        System.out.println("Diện tích hình vuông là: " + this.getArea());
-        System.out.println("Color all four sides");
+        System.out.println("sda");
     }
 }

@@ -1,6 +1,6 @@
 package AbtractClassAndInterface.Exercise.ResizeableInterface;
 
-public class Shape implements Resizeable {
+public abstract class Shape {
     private String color = "green";
     private boolean filled = true;
 
@@ -34,10 +34,5 @@ public class Shape implements Resizeable {
                 + getColor()
                 + " and "
                 + (isFilled() ? "filled" : "not filled");
-    }
-
-    @Override
-    public void resize(double percent) {
-
     }
 }

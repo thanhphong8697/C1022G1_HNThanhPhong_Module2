@@ -1,7 +1,5 @@
 package AbtractClassAndInterface.Exercise.ResizeableInterface;
 
-import AbtractClassAndInterface.Exercise.ColorableInterface.Rectangle;
-
 import java.util.Scanner;
 
 public class TestResizeable {
@@ -21,8 +19,17 @@ public class TestResizeable {
         System.out.println("Nhập độ dài cạnh của hình vông");
         double side = Integer.parseInt(scanner.nextLine());
         shapes[2] = new Square(side);
-        shapes[0].resize(percent);
-        shapes[1].resize(percent);
-        shapes[2].resize(percent);
+        for (Shape shape : shapes){
+            if (shape instanceof Circle){
+                Circle circle = (Circle) shape;
+                circle.resize(percent);
+            }else if (shape instanceof Rectangle){
+                Rectangle rectangle = (Rectangle) shape;
+                rectangle.resize(percent);
+            }else {
+                Square square = (Square) shape;
+                square.resize(percent);
+            }
+        }
     }
 }
