@@ -17,17 +17,17 @@ public class Palindrome {
             elementStack.push(string.charAt(i) + "");
         }
         boolean flag = true;
-        for (int i = 0; i < string.length(); i++){
+        for (int i = 0; i < string.length(); i++) {
             String queueChar = elementQueue.poll();
             String stackChar = elementStack.pop();
-            if (!queueChar.equals(stackChar)){
+            if (!queueChar.equals(stackChar)) {
                 flag = false;
                 break;
             }
         }
-        if (flag){
+        if (flag) {
             System.out.println("Your string is palindrome.");
-        }else{
+        } else {
             System.out.println("Your string isn't palindrome.");
         }
     }

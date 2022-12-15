@@ -10,12 +10,12 @@ public class DecimalBecomeBinary {
         System.out.println("Enter your element wanna change");
         int number = Integer.parseInt(scanner.nextLine());
         int surPlus = 0;
-        while (number > 0){
+        while (number > 0) {
             surPlus = number % 2;
             element.push(surPlus);
             number = number / 2;
         }
-        while (!element.empty()){
+        while (!element.empty()) {
             System.out.println(element.pop());
         }
     }

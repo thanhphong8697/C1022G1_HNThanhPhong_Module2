@@ -9,10 +9,10 @@ public class MyStackStr {
         Scanner scanner = new Scanner(System.in);
         System.out.println("Enter your string.");
         String yourStr = scanner.nextLine();
-        for (int i = 0; i < yourStr.length(); i++){
-            element.push(yourStr.charAt(i) +  "");
+        for (int i = 0; i < yourStr.length(); i++) {
+            element.push(yourStr.charAt(i) + "");
         }
-        for (int i = 0; i < yourStr.length(); i++){
+        for (int i = 0; i < yourStr.length(); i++) {
             System.out.print(element.pop());
         }
 
