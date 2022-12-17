@@ -1,6 +1,6 @@
-package Map.Exercise.ModelTotal.Service;
+package Map.Exercise.Product.ModelTotal.Service;
 
-import Map.Exercise.ModelTotal.Model.Product;
+import Map.Exercise.Product.ModelTotal.Model.Product;
 
 public interface IProductMana {
 

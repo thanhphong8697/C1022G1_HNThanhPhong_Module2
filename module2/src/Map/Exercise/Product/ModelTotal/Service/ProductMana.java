@@ -1,8 +1,8 @@
-package Map.Exercise.ModelTotal.Service;
+package Map.Exercise.Product.ModelTotal.Service;
 
-import Map.Exercise.ModelTotal.Model.Product;
-import Map.Exercise.ModelTotal.Repository.IProductRepo;
-import Map.Exercise.ModelTotal.Repository.ProductRepo;
+import Map.Exercise.Product.ModelTotal.Model.Product;
+import Map.Exercise.Product.ModelTotal.Repository.IProductRepo;
+import Map.Exercise.Product.ModelTotal.Repository.ProductRepo;
 
 public class ProductMana extends Product implements IProductMana {
     private IProductRepo repo = new ProductRepo();

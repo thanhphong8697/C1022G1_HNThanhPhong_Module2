@@ -1,7 +1,7 @@
-package Map.Exercise.Controller;
+package Map.Exercise.Product.Controller;
 
-import Map.Exercise.ModelTotal.Model.Product;
-import Map.Exercise.ModelTotal.Service.ProductMana;
+import Map.Exercise.Product.ModelTotal.Model.Product;
+import Map.Exercise.Product.ModelTotal.Service.ProductMana;
 
 import java.util.Scanner;
 

@@ -1,4 +1,4 @@
-package Map.Exercise.ModelTotal.Model;
+package Map.Exercise.Product.ModelTotal.Model;
 
 public class Product {
     private int id;

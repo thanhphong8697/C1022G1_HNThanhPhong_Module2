@@ -1,6 +1,6 @@
-package Map.Exercise.ModelTotal.Repository;
+package Map.Exercise.Product.ModelTotal.Repository;
 
-import Map.Exercise.ModelTotal.Model.Product;
+import Map.Exercise.Product.ModelTotal.Model.Product;
 
 public interface IProductRepo {
 
