@@ -5,15 +5,12 @@ import Map.Exercise.Product.ModelTotal.Model.Product;
 import java.util.*;
 
 public class ProductRepo implements IProductRepo {
-    List<Product> productList = new ArrayList<>();
-    Product product1 = new Product(1, "Pen", 10000);
-    Product product2 = new Product(2, "Book", 20000);
-    Product product3 = new Product(3, "Notebook", 15000);
+    private static List<Product> productList = new ArrayList<>();
 
-    {
-        productList.add(product1);
-        productList.add(product2);
-        productList.add(product3);
+    static {
+        productList.add(new Product(1, "Pen", 10000));
+        productList.add(new Product(2, "Book", 20000));
+        productList.add(new Product(3, "Notebook", 15000));
 
     }
 
@@ -48,8 +45,9 @@ public class ProductRepo implements IProductRepo {
         Collections.sort(productList, new Comparator<Product>() {
             @Override
             public int compare(Product o1, Product o2) {
-                return o1.getId() - o2.getId();
+                return o2.getId() - o1.getId();
             }
         });
+        this.display();
     }
 }
