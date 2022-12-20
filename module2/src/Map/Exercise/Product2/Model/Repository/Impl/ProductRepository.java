@@ -69,4 +69,14 @@ public class ProductRepository implements IProductRepository {
             }
         }
     }
+
+    @Override
+    public void remove(int id) {
+        for (int i = 0; i < productList.size(); i++) {
+            if (productList.get(i).getId() == id) {
+                productList.remove(i);
+                break;
+            }
+        }
+    }
 }

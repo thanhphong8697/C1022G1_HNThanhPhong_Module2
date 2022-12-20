@@ -37,4 +37,10 @@ public class ProductService implements IProductService {
     public void search(String str) {
         iProductRepository.search(str);
     }
+
+    @Override
+    public void remove(int id) {
+        iProductRepository.remove(id);
+    }
 }
+

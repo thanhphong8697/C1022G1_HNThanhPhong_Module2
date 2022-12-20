@@ -17,7 +17,8 @@ public class ProductController {
                     "3. Update product\n" +
                     "4. Sort list product\n" +
                     "5. Search product\n" +
-                    "6. Exit");
+                    "6. Remove product\n" +
+                    "7. Exit");
             int choice = Integer.parseInt(scanner.nextLine());
             switch (choice) {
                 case 1:
@@ -56,6 +57,11 @@ public class ProductController {
                     String str = scanner.nextLine();
                     iProductService.search(str);
                 case 6:
+                    System.out.println("Enter id to check.");
+                    int idRemove = Integer.parseInt(scanner.nextLine());
+                    iProductService.remove(idRemove);
+                    break;
+                case 7:
                     System.exit(1);
             }
 

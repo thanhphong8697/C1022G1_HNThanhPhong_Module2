@@ -15,4 +15,7 @@ public interface IProductService {
 
     void search(String str);
 
+    void remove(int id);
+
+
 }

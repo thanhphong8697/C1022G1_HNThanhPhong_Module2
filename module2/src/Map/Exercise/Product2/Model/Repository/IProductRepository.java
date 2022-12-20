@@ -15,4 +15,6 @@ public interface IProductRepository {
 
     void search(String str);
 
+    void remove(int id);
+
 }
