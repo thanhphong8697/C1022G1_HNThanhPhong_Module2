@@ -33,9 +33,9 @@ public class ProductRepo implements IProductRepo {
 
     @Override
     public void search(String name) {
-        for (int i = 0; i < productList.size(); i++) {
-            if (productList.get(i).getNameProduct().contains(name)) {
-                System.out.println(productList.get(i));
+        for (Product product : productList) {
+            if (product.getNameProduct().contains(name)) {
+                System.out.println(product);
             }
         }
     }

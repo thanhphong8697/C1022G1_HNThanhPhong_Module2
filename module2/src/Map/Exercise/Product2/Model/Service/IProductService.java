@@ -1,8 +1,8 @@
-package Map.Exercise.Product2.Model.Repository;
+package Map.Exercise.Product2.Model.Service;
 
 import Map.Exercise.Product2.Model.Model.Product;
 
-public interface IProductRepository {
+public interface IProductService {
     void add(Product product);
 
     void display();
