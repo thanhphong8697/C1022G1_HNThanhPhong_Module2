@@ -7,7 +7,8 @@ import java.util.Scanner;
 public class CopyFile {
     public static final String FILE_ORIGIONAL = "D:\\MODULE 2\\module2\\src\\IOTextFile\\Exercise\\CopyFile\\origional";
     public static final String FILE_NEW = "D:\\MODULE 2\\module2\\src\\IOTextFile\\Exercise\\CopyFile\\new";
-    public static void readAndWriteFileCSV(){
+
+    public static void readAndWriteFileCSV() {
         FileReader fileReader = null;
         BufferedReader bufferedReader = null;
         FileWriter fileWriter = null;
@@ -27,7 +28,7 @@ public class CopyFile {
             e.printStackTrace();
         }
         try {
-            while ((line = bufferedReader.readLine()) != null){
+            while ((line = bufferedReader.readLine()) != null) {
                 bufferedWriter.write(line);
                 bufferedWriter.newLine();
                 count += line.length();
@@ -37,7 +38,7 @@ public class CopyFile {
 
         } catch (IOException e) {
             e.printStackTrace();
-        }finally {
+        } finally {
             try {
                 bufferedReader.close();
             } catch (IOException e) {

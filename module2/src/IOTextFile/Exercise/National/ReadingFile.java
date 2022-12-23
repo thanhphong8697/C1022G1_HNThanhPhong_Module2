@@ -18,7 +18,7 @@ public class ReadingFile {
             String line;
             String array[];
             National national;
-            while ((line = bufferedReader.readLine()) != null){
+            while ((line = bufferedReader.readLine()) != null) {
                 array = line.split(",");
                 int id = Integer.parseInt(array[0]);
                 String word = array[1];
@@ -26,14 +26,14 @@ public class ReadingFile {
                 national = new National(id, word, name);
                 System.out.println(line);
             }
-        }catch (FileNotFoundException e){
+        } catch (FileNotFoundException e) {
             throw new FileNotFoundException();
         } catch (IOException e) {
             throw new RuntimeException();
-        }finally {
+        } finally {
             try {
                 bufferedReader.close();
-            }catch (IOException e){
+            } catch (IOException e) {
                 throw new RuntimeException();
             }
         }
