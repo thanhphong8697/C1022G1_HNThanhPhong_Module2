@@ -1,4 +1,4 @@
-package CaseStudy.services.Person.Interface;
+package CaseStudy.repository.Interface;
 
 import CaseStudy.services.Person.Employee;
 

@@ -1,21 +1,31 @@
 package CaseStudy.services.Facility;
 
-public abstract class Facility {
+public class Facility {
     public String serviceName;
     public double usableArea;
     public int rentalCost;
     public int maxiumNumbOfPeople;
     public String rentalType;
+    public String serviceCode;
 
     public Facility() {
     }
 
-    public Facility(String serviceName, double usableArea, int rentalCost, int maxiumNumbOfPeople, String rentalType) {
+    public Facility(String serviceName, double usableArea, int rentalCost, int maxiumNumbOfPeople, String rentalType, String serviceCode) {
         this.serviceName = serviceName;
         this.usableArea = usableArea;
         this.rentalCost = rentalCost;
         this.maxiumNumbOfPeople = maxiumNumbOfPeople;
         this.rentalType = rentalType;
+        this.serviceCode = serviceCode;
+    }
+
+    public String getServiceCode() {
+        return serviceCode;
+    }
+
+    public void setServiceCode(String serviceCode) {
+        this.serviceCode = serviceCode;
     }
 
     public String getServiceName() {
@@ -66,6 +76,7 @@ public abstract class Facility {
                 ", rentalCost=" + rentalCost +
                 ", maxiumNumbOfPeople=" + maxiumNumbOfPeople +
                 ", rentalType='" + rentalType + '\'' +
+                ", serviceCode='" + serviceCode + '\'' +
                 '}';
     }
 }

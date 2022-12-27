@@ -1,4 +1,4 @@
-package CaseStudy.services.Person.Interface;
+package CaseStudy.repository.Interface;
 
 public interface IService {
     void display();

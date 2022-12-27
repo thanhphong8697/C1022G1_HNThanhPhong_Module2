@@ -1,7 +1,7 @@
-package CaseStudy.services.Person.Impl;
+package CaseStudy.repository.Impl;
 
 import CaseStudy.services.Person.Employee;
-import CaseStudy.services.Person.Interface.IEmployeeService;
+import CaseStudy.repository.Interface.IEmployeeService;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -31,9 +31,9 @@ public class EmployeeServiceImpl implements IEmployeeService {
 
     @Override
     public void editEmployee(Employee employee) {
-        for (int i = 0; i < iEmpSer.size(); i++){
-            if (iEmpSer.get(i).getEmployeeId() == employee.getEmployeeId()){
-                iEmpSer.set(i,employee);
+        for (int i = 0; i < iEmpSer.size(); i++) {
+            if (iEmpSer.get(i).getEmployeeId() == employee.getEmployeeId()) {
+                iEmpSer.set(i, employee);
             }
         }
     }
