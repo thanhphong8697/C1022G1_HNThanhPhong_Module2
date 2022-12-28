@@ -44,10 +44,10 @@ public class FacilityController {
                                 do {
                                     System.out.println("Nhập tên phòng");
                                     serviceName = scanner.nextLine();
-                                    if (!serviceName.matches(regexCode.getSERVICE_NAME_REGEX())){
+                                    if (!serviceName.matches(regexCode.getSERVICE_NAME_REGEX())) {
                                         System.out.println("Nhập chưa đúng format");
                                     }
-                                }while (!serviceName.matches(regexCode.getSERVICE_NAME_REGEX()));
+                                } while (!serviceName.matches(regexCode.getSERVICE_NAME_REGEX()));
                                 /**
                                  * DIỆN TÍCH PHÒNG
                                  */
@@ -55,10 +55,10 @@ public class FacilityController {
                                 do {
                                     System.out.println("Nhập diện tích phòng");
                                     usableArea = scanner.nextLine();
-                                    if (!usableArea.matches(regexCode.getUSABLE_AREA_REGEX())){
+                                    if (!usableArea.matches(regexCode.getUSABLE_AREA_REGEX())) {
                                         System.out.println("Nhập chưa đúng format");
                                     }
-                                }while (!usableArea.matches(regexCode.getUSABLE_AREA_REGEX()));
+                                } while (!usableArea.matches(regexCode.getUSABLE_AREA_REGEX()));
                                 /**
                                  * CHI PHÍ THUÊ
                                  */
@@ -66,10 +66,10 @@ public class FacilityController {
                                 do {
                                     System.out.println("Nhập chi phí thuê");
                                     rentalCost = scanner.nextLine();
-                                    if (!rentalCost.matches(regexCode.getRENTAL_COSTS_REGEX())){
+                                    if (!rentalCost.matches(regexCode.getRENTAL_COSTS_REGEX())) {
                                         System.out.println("Nhập chưa đúng format");
                                     }
-                                }while (!rentalCost.matches(regexCode.getRENTAL_COSTS_REGEX()));
+                                } while (!rentalCost.matches(regexCode.getRENTAL_COSTS_REGEX()));
                                 /**
                                  * SỐ NGƯỜI TỐI ĐA
                                  */
@@ -77,10 +77,10 @@ public class FacilityController {
                                 do {
                                     System.out.println("Nhập số người tối đa");
                                     maxiumNumbOfPeople = scanner.nextLine();
-                                    if (!maxiumNumbOfPeople.matches(regexCode.getMAXIMUM_NUMBER_OF_PEOPLE())){
+                                    if (!maxiumNumbOfPeople.matches(regexCode.getMAXIMUM_NUMBER_OF_PEOPLE())) {
                                         System.out.println("Nhập chưa đúng format");
                                     }
-                                }while (!maxiumNumbOfPeople.matches(regexCode.getMAXIMUM_NUMBER_OF_PEOPLE()));
+                                } while (!maxiumNumbOfPeople.matches(regexCode.getMAXIMUM_NUMBER_OF_PEOPLE()));
                                 /**
                                  * KIỂU THUÊ
                                  */
@@ -88,10 +88,10 @@ public class FacilityController {
                                 do {
                                     System.out.println("Kiểu thuê");
                                     rentalType = scanner.nextLine();
-                                    if (!rentalType.matches(regexCode.getRENTAL_TYPE_REGEX())){
+                                    if (!rentalType.matches(regexCode.getRENTAL_TYPE_REGEX())) {
                                         System.out.println("Nhập chưa đúng format");
                                     }
-                                }while (!rentalType.matches(regexCode.getRENTAL_TYPE_REGEX()));
+                                } while (!rentalType.matches(regexCode.getRENTAL_TYPE_REGEX()));
                                 System.out.println("Nhập mã phòng");
                                 String serviceCode = scanner.nextLine();
                                 System.out.println("Nhập dịch vụ cung cấp miễn phí");
@@ -109,10 +109,10 @@ public class FacilityController {
                                 do {
                                     System.out.println("Nhập tên phòng");
                                     serviceNameVilla = scanner.nextLine();
-                                    if (!serviceNameVilla.matches(regexCode.getSERVICE_NAME_REGEX())){
+                                    if (!serviceNameVilla.matches(regexCode.getSERVICE_NAME_REGEX())) {
                                         System.out.println("Nhập chưa đúng format");
                                     }
-                                }while (!serviceNameVilla.matches(regexCode.getSERVICE_NAME_REGEX()));
+                                } while (!serviceNameVilla.matches(regexCode.getSERVICE_NAME_REGEX()));
                                 /**
                                  * DIỆN TÍCH PHÒNG
                                  */
@@ -120,10 +120,10 @@ public class FacilityController {
                                 do {
                                     System.out.println("Nhập diện tích phòng");
                                     usableAreaVilla = scanner.nextLine();
-                                    if (!usableAreaVilla.matches(regexCode.getUSABLE_AREA_REGEX())){
+                                    if (!usableAreaVilla.matches(regexCode.getUSABLE_AREA_REGEX())) {
                                         System.out.println("Nhập chưa đúng format");
                                     }
-                                }while (!usableAreaVilla.matches(regexCode.getUSABLE_AREA_REGEX()));
+                                } while (!usableAreaVilla.matches(regexCode.getUSABLE_AREA_REGEX()));
                                 /**
                                  * CHI PHÍ THUÊ
                                  */
@@ -131,10 +131,10 @@ public class FacilityController {
                                 do {
                                     System.out.println("Nhập chi phí thuê");
                                     rentalCostVilla = scanner.nextLine();
-                                    if (!rentalCostVilla.matches(regexCode.getRENTAL_COSTS_REGEX())){
+                                    if (!rentalCostVilla.matches(regexCode.getRENTAL_COSTS_REGEX())) {
                                         System.out.println("Nhập chưa đúng format");
                                     }
-                                }while (!rentalCostVilla.matches(regexCode.getRENTAL_COSTS_REGEX()));
+                                } while (!rentalCostVilla.matches(regexCode.getRENTAL_COSTS_REGEX()));
                                 /**
                                  * SỐ NGƯỜI TỐI ĐA
                                  */
@@ -142,10 +142,10 @@ public class FacilityController {
                                 do {
                                     System.out.println("Nhập số người tối đa");
                                     maxiumNumbOfPeopleVilla = scanner.nextLine();
-                                    if (!maxiumNumbOfPeopleVilla.matches(regexCode.getMAXIMUM_NUMBER_OF_PEOPLE())){
+                                    if (!maxiumNumbOfPeopleVilla.matches(regexCode.getMAXIMUM_NUMBER_OF_PEOPLE())) {
                                         System.out.println("Nhập chưa đúng format");
                                     }
-                                }while (!maxiumNumbOfPeopleVilla.matches(regexCode.getMAXIMUM_NUMBER_OF_PEOPLE()));
+                                } while (!maxiumNumbOfPeopleVilla.matches(regexCode.getMAXIMUM_NUMBER_OF_PEOPLE()));
                                 /**
                                  * KIỂU THUÊ
                                  */
@@ -153,10 +153,10 @@ public class FacilityController {
                                 do {
                                     System.out.println("Kiểu thuê");
                                     rentalTypeVilla = scanner.nextLine();
-                                    if (!rentalTypeVilla.matches(regexCode.getRENTAL_TYPE_REGEX())){
+                                    if (!rentalTypeVilla.matches(regexCode.getRENTAL_TYPE_REGEX())) {
                                         System.out.println("Nhập chưa đúng format");
                                     }
-                                }while (!rentalTypeVilla.matches(regexCode.getRENTAL_TYPE_REGEX()));
+                                } while (!rentalTypeVilla.matches(regexCode.getRENTAL_TYPE_REGEX()));
                                 System.out.println("Nhập mã phòng");
                                 String serviceCodeVilla = scanner.nextLine();
                                 /**
@@ -166,10 +166,10 @@ public class FacilityController {
                                 do {
                                     System.out.println("Nhập tiêu chuẩn phòng");
                                     roomStandard = scanner.nextLine();
-                                    if (!roomStandard.matches(regexCode.getROOM_STANDARD_REGEX())){
+                                    if (!roomStandard.matches(regexCode.getROOM_STANDARD_REGEX())) {
                                         System.out.println("Nhập chưa đúng format");
                                     }
-                                }while (!roomStandard.matches(regexCode.getROOM_STANDARD_REGEX()));
+                                } while (!roomStandard.matches(regexCode.getROOM_STANDARD_REGEX()));
                                 /**
                                  * DIỆN TÍCH HỒ BƠI
                                  */
@@ -177,10 +177,10 @@ public class FacilityController {
                                 do {
                                     System.out.println("Nhập diện tích hồ bơi");
                                     poolArea = scanner.nextLine();
-                                    if (!poolArea.matches(regexCode.getPOOL_AREA_REGEX())){
+                                    if (!poolArea.matches(regexCode.getPOOL_AREA_REGEX())) {
                                         System.out.println("Nhập chưa đúng format");
                                     }
-                                }while (!poolArea.matches(regexCode.getPOOL_AREA_REGEX()));
+                                } while (!poolArea.matches(regexCode.getPOOL_AREA_REGEX()));
                                 /**
                                  * SỐ TẦNG
                                  */
@@ -188,10 +188,10 @@ public class FacilityController {
                                 do {
                                     System.out.println("Nhập số tầng");
                                     numbOfFloor = scanner.nextLine();
-                                    if (!numbOfFloor.matches(regexCode.getFLOOR_NUMBER_REGEX())){
+                                    if (!numbOfFloor.matches(regexCode.getFLOOR_NUMBER_REGEX())) {
                                         System.out.println("Nhập chưa đúng format");
                                     }
-                                }while (!numbOfFloor.matches(regexCode.getFLOOR_NUMBER_REGEX()));
+                                } while (!numbOfFloor.matches(regexCode.getFLOOR_NUMBER_REGEX()));
                                 Villa villa = new Villa(serviceNameVilla, usableAreaVilla,
                                         rentalCostVilla, maxiumNumbOfPeopleVilla, rentalTypeVilla,
                                         serviceCodeVilla, roomStandard, poolArea, numbOfFloor);
