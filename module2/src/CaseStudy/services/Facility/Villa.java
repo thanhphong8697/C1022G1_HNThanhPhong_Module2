@@ -4,14 +4,14 @@ import CaseStudy.services.Facility.Facility;
 
 public class Villa extends Facility {
     private String roomStandard;
-    private double poolArea;
-    private int numbOfFloor;
+    private String poolArea;
+    private String numbOfFloor;
 
     public Villa() {
     }
 
-    public Villa(String serviceName, double usableArea, int rentalCost, int maxiumNumbOfPeople, String rentalType,
-                 String serviceCode, String roomStandard, double poolArea, int numbOfFloor) {
+    public Villa(String serviceName, String usableArea, String rentalCost, String maxiumNumbOfPeople, String rentalType,
+                 String serviceCode, String roomStandard, String poolArea, String numbOfFloor) {
         super(serviceName, usableArea, rentalCost, maxiumNumbOfPeople, rentalType, serviceCode);
         this.roomStandard = roomStandard;
         this.poolArea = poolArea;
@@ -26,19 +26,19 @@ public class Villa extends Facility {
         this.roomStandard = roomStandard;
     }
 
-    public double getPoolArea() {
+    public String getPoolArea() {
         return poolArea;
     }
 
-    public void setPoolArea(double poolArea) {
+    public void setPoolArea(String poolArea) {
         this.poolArea = poolArea;
     }
 
-    public int getNumbOfFloor() {
+    public String getNumbOfFloor() {
         return numbOfFloor;
     }
 
-    public void setNumbOfFloor(int numbOfFloor) {
+    public void setNumbOfFloor(String numbOfFloor) {
         this.numbOfFloor = numbOfFloor;
     }
 

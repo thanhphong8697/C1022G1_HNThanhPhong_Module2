@@ -5,7 +5,9 @@ import CaseStudy.services.Facility.Room;
 import CaseStudy.services.Facility.Villa;
 import CaseStudy.repository.Interface.IFacilityService;
 
+import java.util.ArrayList;
 import java.util.LinkedHashMap;
+import java.util.List;
 import java.util.Map;
 
 public class FacilityServiceImpl implements IFacilityService {
@@ -13,18 +15,18 @@ public class FacilityServiceImpl implements IFacilityService {
     static Map<Facility, Integer> maintenanceFacilityMap = new LinkedHashMap<>();
 
     static {
-        Facility room1 = new Room("Thuê phòng", 21, 350000, 2,
-                "Thuê theo ngày", "123", "Bộ bàn ủi");
-        Facility room2 = new Room("Thuê phòng", 21, 9000000, 2,
-                "Thuê theo tháng", "124", "Bộ bàn ủi");
-        Facility room3 = new Room("Thuê phòng", 21, 90000000, 2,
-                "Thuê theo năm", "125", "Bộ bàn ủi");
-        Facility villa1 = new Villa("Thuê villa", 75, 4000000, 6,
-                "Thuê ngày", "456", "Standard", 20, 1);
-        Facility villa2 = new Villa("Thuê villa", 100, 120000000, 9,
-                "Thuê tháng", "457", "Sup", 30, 2);
-        Facility villa3 = new Villa("Thuê villa", 200, 1440000000, 13
-                , "Thuê năm", "458", "VIP", 40, 2);
+        Facility room1 = new Room("Thuê phòng", "40", "350000", "2",
+                "Thuê ngày", "SVRO1111", "Bộ bàn ủi");
+        Facility room2 = new Room("Thuê phòng", "40", "9000000", "2",
+                "Thuê tháng", "SVRO1112", "Bộ bàn ủi");
+        Facility room3 = new Room("Thuê phòng", "40", "90000000", "2",
+                "Thuê năm", "SVRO1113", "Bộ bàn ủi");
+        Facility villa1 = new Villa("Thuê villa", "75", "4000000", "6",
+                "Thuê ngày", "SVVL1114", "Standard", "35.0", "1");
+        Facility villa2 = new Villa("Thuê villa", "100", "120000000", "9",
+                "Thuê tháng", "SVVL1115", "Sup", "45.0", "2");
+        Facility villa3 = new Villa("Thuê villa", "200", "1440000000", "13"
+                , "Thuê năm", "SVVL11116", "Vip", "55.0", "2");
         availableFacilityMap.put(room1, 1);
         availableFacilityMap.put(room2, 2);
         availableFacilityMap.put(room3, 5);
@@ -47,10 +49,15 @@ public class FacilityServiceImpl implements IFacilityService {
 
     @Override
     public void maintenanceMap() {
+        List<Facility> maintenanceList = new ArrayList<>();
         for (Map.Entry<Facility, Integer> facility : availableFacilityMap.entrySet()) {
             if (facility.getValue() >= 5) {
-                maintenanceFacilityMap.put((Facility) facility, 0);
+                maintenanceFacilityMap.put(facility.getKey(), facility.getValue());
+                maintenanceList.add(facility.getKey());
             }
+        }
+        for (int i = 0; i < maintenanceList.size(); i++) {
+            availableFacilityMap.remove(maintenanceList.get(i));
         }
     }
 
@@ -69,7 +76,9 @@ public class FacilityServiceImpl implements IFacilityService {
     }
 
     @Override
-    public Object findID(int id) {
+    public Object findID(String id) {
         return null;
     }
+
+
 }

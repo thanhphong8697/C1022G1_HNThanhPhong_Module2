@@ -1,14 +1,14 @@
 package CaseStudy.services.Person;
 
 public class Employee extends Person{
-    private int employeeId;
+    private String employeeId;
     private String academyLevel;
     private String posion;
-    private int salary;
+    private String salary;
 
     public Employee() {
     }
-    public Employee(String fullName, String birthday, String gender, String identityNUmb, String phoneNumb, String email, int employeeId, String academyLevel, String posion, int salary) {
+    public Employee(String fullName, String birthday, String gender, String identityNUmb, String phoneNumb, String email, String employeeId, String academyLevel, String posion, String salary) {
         super(fullName, birthday, gender, identityNUmb, phoneNumb, email);
         this.employeeId = employeeId;
         this.academyLevel = academyLevel;
@@ -16,7 +16,7 @@ public class Employee extends Person{
         this.salary = salary;
     }
 
-    public int getEmployeeId() {
+    public String getEmployeeId() {
         return employeeId;
     }
 
@@ -40,11 +40,11 @@ public class Employee extends Person{
         this.posion = posion;
     }
 
-    public int getSalary() {
+    public String getSalary() {
         return salary;
     }
 
-    public void setSalary(int salary) {
+    public void setSalary(String salary) {
         this.salary = salary;
     }
 

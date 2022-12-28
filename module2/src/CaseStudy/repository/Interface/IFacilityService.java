@@ -7,6 +7,8 @@ import java.util.Map;
 
 public interface IFacilityService extends IService {
     void displayMaintenance();
+
     void addVilla(Villa villa);
+
     void maintenanceMap();
 }

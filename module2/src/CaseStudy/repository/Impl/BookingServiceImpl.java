@@ -14,7 +14,9 @@ public class BookingServiceImpl implements IBookingService {
     }
 
     @Override
-    public Object findID(int id) {
+    public Object findID(String id) {
         return null;
     }
+
+
 }

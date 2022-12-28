@@ -1,23 +1,23 @@
 package CaseStudy.services.Person;
 
 public class Customer extends Person {
-    private int customerId;
+    private String customerId;
     private String customerType;
     private String address;
     public Customer() {
     }
-    public Customer(String fullName, String birthday, String gender, String identityNUmb, String phoneNumb, String email, int customerId, String customerType, String address) {
+    public Customer(String fullName, String birthday, String gender, String identityNUmb, String phoneNumb, String email, String customerId, String customerType, String address) {
         super(fullName, birthday, gender, identityNUmb, phoneNumb, email);
         this.customerId = customerId;
         this.customerType = customerType;
         this.address = address;
     }
 
-    public int getCustomerId() {
+    public String getCustomerId() {
         return customerId;
     }
 
-    public void setCustomerId(int customerId) {
+    public void setCustomerId(String customerId) {
         this.customerId = customerId;
     }
 

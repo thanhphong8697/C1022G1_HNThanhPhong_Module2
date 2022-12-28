@@ -2,16 +2,16 @@ package CaseStudy.services.Facility;
 
 public class Facility {
     public String serviceName;
-    public double usableArea;
-    public int rentalCost;
-    public int maxiumNumbOfPeople;
+    public String usableArea;
+    public String rentalCost;
+    public String maxiumNumbOfPeople;
     public String rentalType;
     public String serviceCode;
 
     public Facility() {
     }
 
-    public Facility(String serviceName, double usableArea, int rentalCost, int maxiumNumbOfPeople, String rentalType, String serviceCode) {
+    public Facility(String serviceName, String usableArea, String rentalCost, String maxiumNumbOfPeople, String rentalType, String serviceCode) {
         this.serviceName = serviceName;
         this.usableArea = usableArea;
         this.rentalCost = rentalCost;
@@ -36,27 +36,27 @@ public class Facility {
         this.serviceName = serviceName;
     }
 
-    public double getUsableArea() {
+    public String getUsableArea() {
         return usableArea;
     }
 
-    public void setUsableArea(double usableArea) {
+    public void setUsableArea(String usableArea) {
         this.usableArea = usableArea;
     }
 
-    public int getRentalCost() {
+    public String getRentalCost() {
         return rentalCost;
     }
 
-    public void setRentalCost(int rentalCost) {
+    public void setRentalCost(String rentalCost) {
         this.rentalCost = rentalCost;
     }
 
-    public int getMaxiumNumbOfPeople() {
+    public String getMaxiumNumbOfPeople() {
         return maxiumNumbOfPeople;
     }
 
-    public void setMaxiumNumbOfPeople(int maxiumNumbOfPeople) {
+    public void setMaxiumNumbOfPeople(String maxiumNumbOfPeople) {
         this.maxiumNumbOfPeople = maxiumNumbOfPeople;
     }
 
