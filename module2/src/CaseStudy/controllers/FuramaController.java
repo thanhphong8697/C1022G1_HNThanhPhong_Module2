@@ -1,18 +1,5 @@
 package CaseStudy.controllers;
 
-import CaseStudy.repository.Impl.FacilityServiceImpl;
-import CaseStudy.repository.Interface.IFacilityService;
-import CaseStudy.services.Facility.Facility;
-import CaseStudy.services.Facility.Room;
-import CaseStudy.services.Facility.Villa;
-import CaseStudy.services.Person.Customer;
-import CaseStudy.services.Person.Employee;
-import CaseStudy.repository.Impl.CustomerServiceImpl;
-import CaseStudy.repository.Impl.EmployeeServiceImpl;
-import CaseStudy.repository.Interface.ICustomerService;
-import CaseStudy.repository.Interface.IEmployeeService;
-
-import java.util.Map;
 import java.util.Scanner;
 
 public class FuramaController {

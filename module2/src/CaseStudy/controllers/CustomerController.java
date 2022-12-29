@@ -1,15 +1,17 @@
 package CaseStudy.controllers;
 
-import CaseStudy.repository.Impl.CustomerServiceImpl;
-import CaseStudy.repository.Interface.ICustomerService;
-import CaseStudy.services.Person.Customer;
+import CaseStudy.repository.implRepo.CustomerRepo;
+import CaseStudy.repository.interfaceRepo.ICustomerRepo;
+import CaseStudy.models.Person.Customer;
+import CaseStudy.services.implService.CustomerService;
+import CaseStudy.services.interfaceService.ICustomerService;
 
 import java.util.Scanner;
 
 public class CustomerController {
     void customerDisplayMainMenu() {
         Scanner scanner = new Scanner(System.in);
-        ICustomerService iCustomerSer = new CustomerServiceImpl();
+        ICustomerService iCustomerSer = new CustomerService();
         int choiceTwo;
         do {
             System.out.println("Your option customers \n" +

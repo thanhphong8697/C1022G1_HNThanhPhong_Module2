@@ -1,15 +1,17 @@
 package CaseStudy.controllers;
 
-import CaseStudy.repository.Impl.EmployeeServiceImpl;
-import CaseStudy.repository.Interface.IEmployeeService;
-import CaseStudy.services.Person.Employee;
+import CaseStudy.repository.implRepo.EmployeeRepo;
+import CaseStudy.repository.interfaceRepo.IEmployeeRepo;
+import CaseStudy.models.Person.Employee;
+import CaseStudy.services.implService.EmployeeService;
+import CaseStudy.services.interfaceService.IEmployeeService;
 
 import java.util.Scanner;
 
 public class EmployeeController {
     void employeeDisplayMainMenu() {
         Scanner scanner = new Scanner(System.in);
-        IEmployeeService iEmpSer = new EmployeeServiceImpl();
+        IEmployeeService iEmpSer = new EmployeeService();
         int choiceOne;
         do {
             System.out.println("Your option employees \n" +
