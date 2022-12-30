@@ -1,6 +1,6 @@
 package CaseStudy.models.Person;
 
-public class Employee extends Person{
+public class Employee extends Person {
     private String employeeId;
     private String academyLevel;
     private String posion;
@@ -8,7 +8,9 @@ public class Employee extends Person{
 
     public Employee() {
     }
-    public Employee(String fullName, String birthday, String gender, String identityNUmb, String phoneNumb, String email, String employeeId, String academyLevel, String posion, String salary) {
+
+    public Employee(String fullName, String birthday, String gender, String identityNUmb, String phoneNumb,
+                    String email, String employeeId, String academyLevel, String posion, String salary) {
         super(fullName, birthday, gender, identityNUmb, phoneNumb, email);
         this.employeeId = employeeId;
         this.academyLevel = academyLevel;
@@ -62,5 +64,10 @@ public class Employee extends Person{
                 ", phoneNumb='" + phoneNumb + '\'' +
                 ", email='" + email + '\'' +
                 '}';
+    }
+
+    public String formatCSVEmp() {
+        final String COMMA = ",";
+        return this.employeeId + COMMA + super.convertLine() + COMMA + this.academyLevel + COMMA + this.posion + COMMA + this.salary;
     }
 }

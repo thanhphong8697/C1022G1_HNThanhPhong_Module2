@@ -4,6 +4,7 @@ import CaseStudy.models.Facility.Facility;
 import CaseStudy.models.Facility.Room;
 import CaseStudy.models.Facility.Villa;
 import CaseStudy.repository.interfaceRepo.IFacilityRepo;
+import CaseStudy.utils.ReadAndWriteRoom;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -73,6 +74,7 @@ public class FacilityRepo implements IFacilityRepo {
     public void add(Object object) {
         Room room = (Room) object;
         availableFacilityMap.put(room, 0);
+        ReadAndWriteRoom.writeRoom(availableFacilityMap);
     }
 
     @Override

@@ -79,4 +79,10 @@ public abstract class Person {
                 ", email='" + email + '\'' +
                 '}';
     }
+
+    public String convertLine() {
+        final String COMMA = ",";
+        return this.fullName + COMMA + this.birthday + COMMA + this.gender + COMMA
+                + this.identityNUmb + COMMA + this.phoneNumb + COMMA + this.email;
+    }
 }

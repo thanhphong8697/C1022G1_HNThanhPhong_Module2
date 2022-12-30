@@ -2,6 +2,7 @@ package CaseStudy.repository.implRepo;
 
 import CaseStudy.models.Person.Customer;
 import CaseStudy.repository.interfaceRepo.ICustomerRepo;
+import CaseStudy.utils.ReadAndWriteCustomer;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -15,11 +16,11 @@ public class CustomerRepo implements ICustomerRepo {
         customerList.add(new Customer("Nguyễn Văn C", "16/12/1990", "Nam", "123756987", "123458", "c@gmail.com", "3", "Gold", "Hải Phòng"));
         customerList.add(new Customer("Nguyễn Văn D", "17/12/1990", "Nam", "123486987", "123459", "d@gmail.com", "4", "Silver", "Sài Gòn"));
         customerList.add(new Customer("Lê Thị A", "18/12/1990", "Nữ", "127486987", "223459", "e@gmail.com", "5", "Member", "Huế"));
-
     }
 
     @Override
     public void display() {
+        customerList = ReadAndWriteCustomer.readCustomer();
         for (Customer customer : customerList) {
             System.out.println(customer);
         }
@@ -28,6 +29,7 @@ public class CustomerRepo implements ICustomerRepo {
     @Override
     public void add(Object object) {
         customerList.add((Customer) object);
+        ReadAndWriteCustomer.writeCustomer(customerList);
     }
 
     @Override

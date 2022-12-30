@@ -2,6 +2,8 @@ package CaseStudy.repository.implRepo;
 
 import CaseStudy.models.Person.Employee;
 import CaseStudy.repository.interfaceRepo.IEmployeeRepo;
+import CaseStudy.utils.ReadAndWriteEmployee;
+import IOTextFile.Practice.ReadAndWriteFile;
 
 import java.util.ArrayList;
 import java.util.List;
@@ -17,7 +19,6 @@ public class EmployeeRepo implements IEmployeeRepo {
         iEmpSer.add(new Employee("Hoàng Thị Như Quỳnh", "19/03/2003", "Nữ", "127", "123456779", "abc5@gmail.com", "5", "Graduate school", "Receptionist", "200000"));
         iEmpSer.add(new Employee("Lê Tá Anh Đào", "16/03/2003", "Nam", "128", "123496799", "abc6@gmail.com", "6", "University", "staff", "200000"));
     }
-
 
     @Override
     public void deleteEmployee(Employee employee) {
@@ -41,6 +42,7 @@ public class EmployeeRepo implements IEmployeeRepo {
 
     @Override
     public void display() {
+        iEmpSer = ReadAndWriteEmployee.readEmploy();
         for (Employee employee : iEmpSer) {
             System.out.println(employee);
         }
@@ -49,6 +51,7 @@ public class EmployeeRepo implements IEmployeeRepo {
     @Override
     public void add(Object object) {
         iEmpSer.add((Employee) object);
+        ReadAndWriteEmployee.writeEmployee(iEmpSer);
     }
 
     @Override

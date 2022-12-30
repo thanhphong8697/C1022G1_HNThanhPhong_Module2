@@ -79,4 +79,8 @@ public class Facility {
                 ", serviceCode='" + serviceCode + '\'' +
                 '}';
     }
+    public String convertLine(){
+        final String COMMA = ",";
+        return this.serviceName + COMMA + this.usableArea + COMMA + this.rentalCost + COMMA + this.maxiumNumbOfPeople + COMMA + this.rentalType + COMMA + this.serviceCode;
+    }
 }
