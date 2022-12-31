@@ -133,7 +133,7 @@ public class FacilityController {
                                 Room room = new Room(serviceName, usableArea,
                                         rentalCost, maxiumNumbOfPeople, rentalType,
                                         serviceCode, freeServiceIncluded);
-                                iFacilitySer.add(room);
+                                iFacilitySer.addRoom(room);
                                 break;
                             case 2:
                                 /**

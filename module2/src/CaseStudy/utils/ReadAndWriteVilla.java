@@ -1,24 +1,21 @@
 package CaseStudy.utils;
 
-import CaseStudy.models.Facility.Facility;
 import CaseStudy.models.Facility.Room;
-import CaseStudy.models.Person.Employee;
+import CaseStudy.models.Facility.Villa;
 
 import java.io.*;
-import java.util.ArrayList;
 import java.util.LinkedHashMap;
-import java.util.List;
 import java.util.Map;
 
-public class ReadAndWriteRoom {
-    private static final String FILE_ROOM = "src\\CaseStudy\\filecsv\\room.csv";
+public class ReadAndWriteVilla {
+    private static final String FILE_VILLA = "src\\CaseStudy\\filecsv\\villa.csv";
 
-    public static Map<Room, Integer> readRoom() {
-        Map<Room, Integer> roomIntegerMap = new LinkedHashMap<>();
+    public static Map<Villa, Integer> readVilla() {
+        Map<Villa, Integer> villaIntegerMap = new LinkedHashMap<>();
         FileReader fileReader = null;
         BufferedReader bufferedReader = null;
         try {
-            fileReader = new FileReader(FILE_ROOM);
+            fileReader = new FileReader(FILE_VILLA);
             bufferedReader = new BufferedReader(fileReader);
             String line;
             String temp[];
@@ -30,9 +27,11 @@ public class ReadAndWriteRoom {
                 String maxiumNumbOfPeople = temp[3];
                 String rentalType = temp[4];
                 String serviceCode = temp[5];
-                String freeServiceIncluded = temp[6];
-                Room room = new Room(serviceName, usableArea, rentalCost, maxiumNumbOfPeople, rentalType, serviceCode, freeServiceIncluded);
-                roomIntegerMap.put(room, Integer.parseInt(temp[7]));
+                String roomStandard = temp[6];
+                String poolArea = temp[7];
+                String numbOfFloor = temp[8];
+                Villa villa = new Villa(serviceName, usableArea, rentalCost, maxiumNumbOfPeople, rentalType, serviceCode, roomStandard, poolArea, numbOfFloor);
+                villaIntegerMap.put(villa, Integer.parseInt(temp[9]));
             }
         } catch (FileNotFoundException e) {
             e.printStackTrace();
@@ -45,17 +44,17 @@ public class ReadAndWriteRoom {
                 e.printStackTrace();
             }
         }
-        return roomIntegerMap;
+        return villaIntegerMap;
     }
 
-    public static void writeRoom(Map<Room, Integer> roomIntegerMap) {
+    public static void writeVilla(Map<Villa, Integer> villaIntegerMap) {
         FileWriter fileWriter = null;
         BufferedWriter bufferedWriter = null;
         try {
-            fileWriter = new FileWriter(FILE_ROOM);
+            fileWriter = new FileWriter(FILE_VILLA);
             bufferedWriter = new BufferedWriter(fileWriter);
-            for (Map.Entry<Room, Integer> roomIntegerMap1 : roomIntegerMap.entrySet()) {
-                bufferedWriter.write(roomIntegerMap1.getKey().formatCSVRoom() + "," + roomIntegerMap1.getValue());
+            for (Map.Entry<Villa, Integer> villaIntegerMap1 : villaIntegerMap.entrySet()) {
+                bufferedWriter.write(villaIntegerMap1.getKey().formatCSVVilla() + "," + villaIntegerMap1.getValue());
                 bufferedWriter.newLine();
             }
         } catch (IOException e) {

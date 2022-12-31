@@ -5,6 +5,7 @@ import CaseStudy.models.Facility.Room;
 import CaseStudy.models.Facility.Villa;
 import CaseStudy.repository.interfaceRepo.IFacilityRepo;
 import CaseStudy.utils.ReadAndWriteRoom;
+import CaseStudy.utils.ReadAndWriteVilla;
 
 import java.util.ArrayList;
 import java.util.LinkedHashMap;
@@ -45,7 +46,16 @@ public class FacilityRepo implements IFacilityRepo {
 
     @Override
     public void addVilla(Villa villa) {
+        Map<Villa, Integer> mapVillaAdd = ReadAndWriteVilla.readVilla();
         availableFacilityMap.put(villa, 0);
+        ReadAndWriteVilla.writeVilla(mapVillaAdd);
+    }
+
+    @Override
+    public void addRoom(Room room) {
+        Map<Room, Integer> mapRoomAdd = ReadAndWriteRoom.readRoom();
+        mapRoomAdd.put(room, 0);
+        ReadAndWriteRoom.writeRoom(mapRoomAdd);
     }
 
     @Override
@@ -64,6 +74,10 @@ public class FacilityRepo implements IFacilityRepo {
 
     @Override
     public void display() {
+        Map<Room, Integer> mapRoom = ReadAndWriteRoom.readRoom();
+        availableFacilityMap.putAll(mapRoom);
+        Map<Villa, Integer> mapVilla = ReadAndWriteVilla.readVilla();
+        availableFacilityMap.putAll(mapVilla);
         for (Map.Entry<Facility, Integer> facility : availableFacilityMap.entrySet()) {
             System.out.println(facility.getKey() + " - " + facility.getValue());
         }
@@ -72,9 +86,9 @@ public class FacilityRepo implements IFacilityRepo {
 
     @Override
     public void add(Object object) {
-        Room room = (Room) object;
-        availableFacilityMap.put(room, 0);
-        ReadAndWriteRoom.writeRoom(availableFacilityMap);
+//        Room room = (Room) object;
+//        availableFacilityMap.put(room, 0);
+//        ReadAndWriteRoom.writeRoom(availableFacilityMap);
     }
 
     @Override

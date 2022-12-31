@@ -22,6 +22,11 @@ public class FacilityService implements IFacilityService {
     }
 
     @Override
+    public void addRoom(Room room) {
+        iFacilityRepo.addRoom(room);
+    }
+
+    @Override
     public void maintenanceMap() {
         iFacilityRepo.maintenanceMap();
     }
@@ -33,8 +38,8 @@ public class FacilityService implements IFacilityService {
 
     @Override
     public void add(Object object) {
-        Room room = (Room) object;
-        iFacilityRepo.add(room);
+//        Room room = (Room) object;
+//        iFacilityRepo.add(room);
     }
 
     @Override
