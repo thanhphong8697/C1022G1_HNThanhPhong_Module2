@@ -23,7 +23,7 @@ public class EmployeeController {
                     "5. Return main menu");
             try {
                 choiceOne = Integer.parseInt(scanner.nextLine());
-            }catch (NumberFormatException e){
+            } catch (NumberFormatException e) {
                 e.printStackTrace();
             }
             switch (choiceOne) {
@@ -62,7 +62,7 @@ public class EmployeeController {
                     Employee employee1 = (Employee) iEmpSer.findID(idToCheckEmpDelete);
                     if (employee1 != null) {
                         iEmpSer.deleteEmployee(employee1);
-                    }else {
+                    } else {
                         try {
                             throw new NotFoundException("NotFoundExcepton");
                         } catch (NotFoundException e) {
@@ -91,7 +91,7 @@ public class EmployeeController {
                                             "10. quay lại menu nhân viên");
                             try {
                                 yourChoiceEmp = Integer.parseInt(scanner.nextLine());
-                            }catch (NumberFormatException e){
+                            } catch (NumberFormatException e) {
                                 e.printStackTrace();
                             }
                             switch (yourChoiceEmp) {

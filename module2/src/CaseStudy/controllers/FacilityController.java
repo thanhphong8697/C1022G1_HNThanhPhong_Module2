@@ -24,7 +24,7 @@ public class FacilityController {
                             "4. Return main menu");
             try {
                 choiceThree = Integer.parseInt(scanner.nextLine());
-            }catch (NumberFormatException e){
+            } catch (NumberFormatException e) {
                 e.printStackTrace();
             }
             switch (choiceThree) {
@@ -42,7 +42,7 @@ public class FacilityController {
                                         "3. Return facility menu");
                         try {
                             choiceAddFacility = Integer.parseInt(scanner.nextLine());
-                        }catch (NumberFormatException e){
+                        } catch (NumberFormatException e) {
                             e.printStackTrace();
                         }
                         switch (choiceAddFacility) {

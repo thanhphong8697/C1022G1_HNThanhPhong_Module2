@@ -54,7 +54,8 @@ public class Villa extends Facility {
                 ", serviceCode='" + serviceCode + '\'' +
                 '}';
     }
-    public String formatCSVVilla(){
+
+    public String formatCSVVilla() {
         final String COMMA = ",";
         return super.convertLine() + COMMA + this.roomStandard + COMMA + this.poolArea + COMMA + this.numbOfFloor;
     }

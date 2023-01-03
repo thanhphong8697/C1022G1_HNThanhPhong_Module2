@@ -21,7 +21,7 @@ public class CustomerController {
                     "4. Return main menu");
             try {
                 choiceTwo = Integer.parseInt(scanner.nextLine());
-            }catch (NumberFormatException e){
+            } catch (NumberFormatException e) {
                 e.printStackTrace();
             }
             switch (choiceTwo) {
@@ -72,7 +72,7 @@ public class CustomerController {
                                             "9. quay lại menu kh");
                             try {
                                 yourChoiceCus = Integer.parseInt(scanner.nextLine());
-                            }catch (NumberFormatException e){
+                            } catch (NumberFormatException e) {
                                 e.printStackTrace();
                             }
                             switch (yourChoiceCus) {
