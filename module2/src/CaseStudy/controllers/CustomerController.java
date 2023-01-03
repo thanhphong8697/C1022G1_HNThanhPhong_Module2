@@ -12,14 +12,18 @@ public class CustomerController {
     void customerDisplayMainMenu() {
         Scanner scanner = new Scanner(System.in);
         ICustomerService iCustomerSer = new CustomerService();
-        int choiceTwo;
+        int choiceTwo = 0;
         do {
             System.out.println("Your option customers \n" +
                     "1. Display list customer. \n" +
                     "2. Add new customer. \n" +
                     "3. Edit customer. \n" +
                     "4. Return main menu");
-            choiceTwo = Integer.parseInt(scanner.nextLine());
+            try {
+                choiceTwo = Integer.parseInt(scanner.nextLine());
+            }catch (NumberFormatException e){
+                e.printStackTrace();
+            }
             switch (choiceTwo) {
                 case 1:
                     iCustomerSer.display();
@@ -53,7 +57,7 @@ public class CustomerController {
                     String idToCheckCusEdit = scanner.nextLine();
                     Customer customer1 = (Customer) iCustomerSer.findID(idToCheckCusEdit);
                     if (customer1 != null) {
-                        int yourChoiceCus;
+                        int yourChoiceCus = 0;
                         do {
                             System.out.println(
                                     "Your choice: \n" +
@@ -66,7 +70,12 @@ public class CustomerController {
                                             "7. Cập nhật lại hạn mức kh. \n" +
                                             "8. Cập nhật lại địa chỉ kh. \n" +
                                             "9. quay lại menu kh");
-                            switch (yourChoiceCus = Integer.parseInt(scanner.nextLine())) {
+                            try {
+                                yourChoiceCus = Integer.parseInt(scanner.nextLine());
+                            }catch (NumberFormatException e){
+                                e.printStackTrace();
+                            }
+                            switch (yourChoiceCus) {
                                 case 1:
                                     System.out.println("Nhập tên kh");
                                     String customerNewName = scanner.nextLine();

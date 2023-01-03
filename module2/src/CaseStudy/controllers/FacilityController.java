@@ -1,6 +1,5 @@
 package CaseStudy.controllers;
 
-import CaseStudy.repository.implRepo.FacilityRepo;
 import CaseStudy.repository.interfaceRepo.IFacilityRepo;
 import CaseStudy.models.Facility.Room;
 import CaseStudy.models.Facility.Villa;
@@ -15,7 +14,7 @@ public class FacilityController {
         Scanner scanner = new Scanner(System.in);
         IFacilityService iFacilitySer = new FacilityService();
         RegexCode regexCode = new RegexCode();
-        int choiceThree;
+        int choiceThree = 0;
         do {
             System.out.println(
                     "Your option facility \n" +
@@ -23,21 +22,30 @@ public class FacilityController {
                             "2. Add new facility. \n" +
                             "3. Display list facility maintenance. \n" +
                             "4. Return main menu");
-            choiceThree = Integer.parseInt(scanner.nextLine());
+            try {
+                choiceThree = Integer.parseInt(scanner.nextLine());
+            }catch (NumberFormatException e){
+                e.printStackTrace();
+            }
             switch (choiceThree) {
                 case 1:
                     iFacilitySer.maintenanceMap();
                     iFacilitySer.display();
                     break;
                 case 2:
-                    int choiceAddFacility;
+                    int choiceAddFacility = 0;
                     do {
                         System.out.println(
                                 "Your choice \n" +
                                         "1. Add Room \n" +
                                         "2. Add Villa \n" +
                                         "3. Return facility menu");
-                        switch (choiceAddFacility = Integer.parseInt(scanner.nextLine())) {
+                        try {
+                            choiceAddFacility = Integer.parseInt(scanner.nextLine());
+                        }catch (NumberFormatException e){
+                            e.printStackTrace();
+                        }
+                        switch (choiceAddFacility) {
                             case 1:
                                 /**
                                  * TÊN DỊCH VỤ

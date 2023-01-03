@@ -3,10 +3,8 @@ package CaseStudy.services.implService;
 import CaseStudy.models.Facility.Room;
 import CaseStudy.models.Facility.Villa;
 import CaseStudy.repository.implRepo.FacilityRepo;
-import CaseStudy.repository.interfaceRepo.ICustomerRepo;
 import CaseStudy.repository.interfaceRepo.IFacilityRepo;
 import CaseStudy.services.interfaceService.IFacilityService;
-import CaseStudy.services.interfaceService.IService;
 
 public class FacilityService implements IFacilityService {
     IFacilityRepo iFacilityRepo = new FacilityRepo();

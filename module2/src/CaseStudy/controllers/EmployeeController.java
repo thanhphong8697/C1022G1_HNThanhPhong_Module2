@@ -5,6 +5,7 @@ import CaseStudy.repository.interfaceRepo.IEmployeeRepo;
 import CaseStudy.models.Person.Employee;
 import CaseStudy.services.implService.EmployeeService;
 import CaseStudy.services.interfaceService.IEmployeeService;
+import CaseStudy.utils.NotFoundException;
 
 import java.util.Scanner;
 
@@ -12,7 +13,7 @@ public class EmployeeController {
     void employeeDisplayMainMenu() {
         Scanner scanner = new Scanner(System.in);
         IEmployeeService iEmpSer = new EmployeeService();
-        int choiceOne;
+        int choiceOne = 0;
         do {
             System.out.println("Your option employees \n" +
                     "1. Display list employees. \n" +
@@ -20,7 +21,11 @@ public class EmployeeController {
                     "3. Delete employee. \n" +
                     "4. Edit employee. \n" +
                     "5. Return main menu");
-            choiceOne = Integer.parseInt(scanner.nextLine());
+            try {
+                choiceOne = Integer.parseInt(scanner.nextLine());
+            }catch (NumberFormatException e){
+                e.printStackTrace();
+            }
             switch (choiceOne) {
                 case 1:
                     iEmpSer.display();
@@ -57,6 +62,12 @@ public class EmployeeController {
                     Employee employee1 = (Employee) iEmpSer.findID(idToCheckEmpDelete);
                     if (employee1 != null) {
                         iEmpSer.deleteEmployee(employee1);
+                    }else {
+                        try {
+                            throw new NotFoundException("NotFoundExcepton");
+                        } catch (NotFoundException e) {
+                            e.printStackTrace();
+                        }
                     }
                     break;
                 case 4:
@@ -64,7 +75,7 @@ public class EmployeeController {
                     String idToCheckEmpEdit = scanner.nextLine();
                     Employee employee2 = (Employee) iEmpSer.findID(idToCheckEmpEdit);
                     if (employee2 != null) {
-                        int yourChoiceEmp;
+                        int yourChoiceEmp = 0;
                         do {
                             System.out.println(
                                     "Your choice: \n" +
@@ -78,7 +89,12 @@ public class EmployeeController {
                                             "8. Cập nhật lại chức vụ. \n" +
                                             "9. Cập nhật lại lương. \n" +
                                             "10. quay lại menu nhân viên");
-                            switch (yourChoiceEmp = Integer.parseInt(scanner.nextLine())) {
+                            try {
+                                yourChoiceEmp = Integer.parseInt(scanner.nextLine());
+                            }catch (NumberFormatException e){
+                                e.printStackTrace();
+                            }
+                            switch (yourChoiceEmp) {
                                 case 1:
                                     System.out.println("Nhập tên");
                                     String employeeNewName = scanner.nextLine();

@@ -16,26 +16,26 @@ public class FacilityRepo implements IFacilityRepo {
     static Map<Facility, Integer> availableFacilityMap = new LinkedHashMap<>();
     static Map<Facility, Integer> maintenanceFacilityMap = new LinkedHashMap<>();
 
-    static {
-        Facility room1 = new Room("Thuê phòng", "40", "350000", "2",
-                "Thuê ngày", "SVRO-1111", "Bộ bàn ủi");
-        Facility room2 = new Room("Thuê phòng", "40", "9000000", "2",
-                "Thuê tháng", "SVRO-1112", "Bộ bàn ủi");
-        Facility room3 = new Room("Thuê phòng", "40", "90000000", "2",
-                "Thuê năm", "SVRO-1113", "Bộ bàn ủi");
-        Facility villa1 = new Villa("Thuê villa", "75", "4000000", "6",
-                "Thuê ngày", "SVVL-1114", "Standard", "35.0", "1");
-        Facility villa2 = new Villa("Thuê villa", "100", "120000000", "9",
-                "Thuê tháng", "SVV-L1115", "Sup", "45.0", "2");
-        Facility villa3 = new Villa("Thuê villa", "200", "1440000000", "13"
-                , "Thuê năm", "SVVL-11116", "Vip", "55.0", "2");
-        availableFacilityMap.put(room1, 1);
-        availableFacilityMap.put(room2, 2);
-        availableFacilityMap.put(room3, 5);
-        availableFacilityMap.put(villa1, 1);
-        availableFacilityMap.put(villa2, 2);
-        availableFacilityMap.put(villa3, 5);
-    }
+//    static {
+//        Facility room1 = new Room("Thuê phòng", "40", "350000", "2",
+//                "Thuê ngày", "SVRO-1111", "Bộ bàn ủi");
+//        Facility room2 = new Room("Thuê phòng", "40", "9000000", "2",
+//                "Thuê tháng", "SVRO-1112", "Bộ bàn ủi");
+//        Facility room3 = new Room("Thuê phòng", "40", "90000000", "2",
+//                "Thuê năm", "SVRO-1113", "Bộ bàn ủi");
+//        Facility villa1 = new Villa("Thuê villa", "75", "4000000", "6",
+//                "Thuê ngày", "SVVL-1114", "Standard", "35.0", "1");
+//        Facility villa2 = new Villa("Thuê villa", "100", "120000000", "9",
+//                "Thuê tháng", "SVV-L1115", "Sup", "45.0", "2");
+//        Facility villa3 = new Villa("Thuê villa", "200", "1440000000", "13"
+//                , "Thuê năm", "SVVL-11116", "Vip", "55.0", "2");
+//        availableFacilityMap.put(room1, 1);
+//        availableFacilityMap.put(room2, 2);
+//        availableFacilityMap.put(room3, 5);
+//        availableFacilityMap.put(villa1, 1);
+//        availableFacilityMap.put(villa2, 2);
+//        availableFacilityMap.put(villa3, 5);
+//    }
 
     @Override
     public void displayMaintenance() {
@@ -95,6 +95,5 @@ public class FacilityRepo implements IFacilityRepo {
     public Object findID(String id) {
         return null;
     }
-
 
 }
